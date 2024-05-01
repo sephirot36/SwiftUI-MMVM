@@ -11,27 +11,28 @@ struct CharacterEntity: BaseEntity {
     
     let id: Int?
     let name: String?
-    let status: String?
-    let species: CharacterSpecie?
-    let gender: CharacterGender?
+    let status: CharacterStatusEntity?
+    let species: CharacterSpecieEntity?
+    let gender: CharacterGenderEntity?
     let image: String?
     let url: String?
 }
 
-enum CharacterStatus: String, BaseEntity {
+enum CharacterStatusEntity: String, BaseEntity {
     case Alive
     case Dead
     case unknown
 }
 
-enum CharacterGender: String, BaseEntity {
+enum CharacterGenderEntity: String, BaseEntity {
     case Female
     case Male
     case Genderless
     case unknown
 }
 
-enum CharacterSpecie: String, BaseEntity {
+enum CharacterSpecieEntity: String, BaseEntity {
     case Alien
     case Human
+    case unknown
 }
