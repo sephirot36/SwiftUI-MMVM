@@ -28,6 +28,7 @@
 		140B7F1E2BE23D4800B61F63 /* URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140B7F182BE23D4800B61F63 /* URLRequestConvertible.swift */; };
 		140B7F242BE23DB500B61F63 /* RickAndMortyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140B7F202BE23DB500B61F63 /* RickAndMortyAPI.swift */; };
 		140B7F252BE23DB500B61F63 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140B7F222BE23DB500B61F63 /* API.swift */; };
+		140B7F272BE241B200B61F63 /* RickAndMortyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140B7F262BE241B200B61F63 /* RickAndMortyRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		140B7F182BE23D4800B61F63 /* URLRequestConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestConvertible.swift; sourceTree = "<group>"; };
 		140B7F202BE23DB500B61F63 /* RickAndMortyAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RickAndMortyAPI.swift; sourceTree = "<group>"; };
 		140B7F222BE23DB500B61F63 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		140B7F262BE241B200B61F63 /* RickAndMortyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 		140B7F072BE2349C00B61F63 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				140B7F262BE241B200B61F63 /* RickAndMortyRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				140B7F1C2BE23D4800B61F63 /* RemoteDataSource.swift in Sources */,
 				140B7EDD2BE2342700B61F63 /* Item.swift in Sources */,
 				140B7F092BE2356200B61F63 /* CharacterEntity.swift in Sources */,
+				140B7F272BE241B200B61F63 /* RickAndMortyRepository.swift in Sources */,
 				140B7F1E2BE23D4800B61F63 /* URLRequestConvertible.swift in Sources */,
 				140B7F132BE23C0000B61F63 /* DataError.swift in Sources */,
 				140B7F0F2BE2387B00B61F63 /* CharacterListEntity.swift in Sources */,
