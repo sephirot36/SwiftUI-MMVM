@@ -66,6 +66,6 @@ extension CharacterListViewModelDefault: CharacterListViewModel {
     }
     
     func loadCharacterDetail(id: String) {
-        router.navigateToPokemonDetail(id: id)
+        router.navigateToCharacterDetail(id: id)
     }
 }

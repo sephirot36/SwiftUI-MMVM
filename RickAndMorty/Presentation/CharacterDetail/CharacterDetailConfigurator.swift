@@ -1,13 +1,13 @@
 //
-//  CharacterListConfigurator.swift
+//  CharacterDetailConfigurator.swift
 //  RickAndMorty
 //
-//  Created by Daniel Castro muñoz on 1/5/24.
+//  Created by Daniel Castro muñoz on 2/5/24.
 //
 
 import SwiftUI
 
-struct CharacterListConfigurator {
+struct CharacterDetailConfigurator {
     
     private let navigationController: NavigationController
    
@@ -15,27 +15,29 @@ struct CharacterListConfigurator {
         self.navigationController = navigationController
     }
     
-    func viewController() -> UIViewController {
+    func viewController(characterID: String) -> UIViewController {
         // Router
-        let router = CharacterListDefaultRouter(navigationController: navigationController)
+        let router = CharacterDetailDefaultRouter(navigationController: navigationController)
         
         // Repository
         let dataSource = RickAndMortyDataSourceDefault()
         let repository = RickAndMortyRepositoryDefault(remoteDataSource: dataSource)
         
         // Interactor
-        let getCharactersListInteractor = GetCharacterListInteractorDefault(repository: repository)
+        let getCharacterDetailInteractor = GetCharacterDetailInteractorDefault(repository: repository)
         
         // viewModel
-        let viewModel = CharacterListViewModelDefault(
-            getCharactersInteractor: getCharactersListInteractor,
+        let viewModel = CharacterDetailViewModelDefault(
+            characterID: characterID,
+            getCharacterDetailInteractor: getCharacterDetailInteractor,
             router: router
         )
         
         // View
-        let view: some View = CharacterListView<CharacterListViewModelDefault>().environmentObject(viewModel)
+        let view: some View = CharacterDetailView<CharacterDetailViewModelDefault>().environmentObject(viewModel)
         let hostingController: UIViewController = HostingController(rootView: view)
         
         return hostingController
     }
 }
+

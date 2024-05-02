@@ -11,6 +11,7 @@ import SwiftData
 struct CharacterListView<ViewModel: CharacterListViewModel>: View {
     
     @EnvironmentObject var viewModel: ViewModel
+    @State private var isRotating = 0.0
     
     var body: some View {
         ZStack {
@@ -25,10 +26,26 @@ struct CharacterListView<ViewModel: CharacterListViewModel>: View {
                 CharacterListContentView<ViewModel>()
             }
         }
+        .toolbar(.logo)
     }
     
     var loading: some View {
-        VStack {
+        VStack(spacing: Theme.Spacing.space_2) {
+            ZStack {
+                Image("loading")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 60)
+                    .opacity(0.8)
+                    .rotationEffect(.degrees(isRotating))
+                                .onAppear {
+                                    withAnimation(.linear(duration: 1)
+                                            .speed(0.75).repeatForever(autoreverses: false)) {
+                                        isRotating = 360.0
+                                    }
+                                }
+            }
+            .padding(.top, Theme.Spacing.space_2)
             Text("Loading")
                 .font(.system(size: 15, weight: .bold))
                 .foregroundColor(.black)

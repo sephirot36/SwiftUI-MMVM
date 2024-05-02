@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CharacterListRouter {
-    func navigateToPokemonDetail(id: String)
+    func navigateToCharacterDetail(id: String)
 }
 
 final class CharacterListDefaultRouter {
@@ -22,12 +22,12 @@ final class CharacterListDefaultRouter {
 
 extension CharacterListDefaultRouter: CharacterListRouter {
     
-    func navigateToPokemonDetail(id: String) {
+    func navigateToCharacterDetail(id: String) {
         guard let navigationController else {
             return
         }
-      /*  let viewController = PokemonDetailConfigurator(navigationController: navigationController).viewController(pokemonNumber: id)
+        let viewController = CharacterDetailConfigurator(navigationController: navigationController).viewController(characterID: id)
         navigationController.pushViewController(viewController, animated: true)
-       */
+       
     }
 }

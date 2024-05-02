@@ -18,7 +18,7 @@ struct CharacterListContentView<ViewModel: CharacterListViewModel>: View {
                     CharacterListItem(
                         viewModel: chacractersListItemViewModel,
                         onTap: {
-                            // presenter.loadPokemonDetail(id: pokemonListItemViewModel.number)
+                            viewModel.loadCharacterDetail(id: "\(chacractersListItemViewModel.id)")
                         }, onDelete: {}
                     )
                 }
