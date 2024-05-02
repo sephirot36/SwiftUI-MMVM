@@ -25,20 +25,6 @@ struct CharacterListContentView<ViewModel: CharacterListViewModel>: View {
             }
             .padding(.all, 16)
         }
+        .scrollIndicators(.hidden)
     }
 }
-/*
-struct CharacterListContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        let pokemonList = [Pokemon.mock()]
-        let presenter: PokemonListPresenterMock = PokemonListPresenterMock(pokemonList: pokemonList)
-        DevicesPreview {
-            ZStack {
-                PokemonListContentView<PokemonListPresenterMock>()
-                    .environmentObject(presenter)
-            }
-        }
-    }
-     
-}
- */

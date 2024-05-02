@@ -11,6 +11,7 @@ struct CharacterListItem: View {
     
     private let avatarSize: CGFloat = 90
     private let rowSizeHeight: CGFloat = 90
+    private let specieSize: CGFloat = 40
     
     let space_16: CGFloat = 16
     
@@ -34,26 +35,25 @@ struct CharacterListItem: View {
     
     var background: some View {
         Rectangle()
-            .foregroundColor(.gray)
+            .foregroundColor(Color("R&M-Orange"))
             .frame(height: rowSizeHeight)
-            // .cornerRadius(32)
+            .cornerRadius(avatarSize)
     }
     
     var content: some View {
-        HStack(spacing: space_16) {
+        HStack(spacing: Theme.Spacing.space_2) {
             picture
-            Spacer()
             name
             Spacer()
+            portal
         }
         .frame(height: rowSizeHeight)
-        .padding(.horizontal, space_16)
     }
     
     var name: some View {
         Text(viewModel.name)
-            .font(.system(size: 12, weight: .bold))
-            .foregroundColor(.white)
+            .font(Theme.Font.bold15)
+            .foregroundColor(Color("R&M-Brown"))
     }
     
     var picture: some View {
@@ -61,6 +61,16 @@ struct CharacterListItem: View {
             .resizable()
             .aspectRatio(contentMode: .fill)
             .frame(width: avatarSize, height: avatarSize)
+             .clipShape(Circle())
+    }
+    
+    var portal: some View {
+        Image("portal")
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .frame(width: avatarSize, height: avatarSize)
+             .clipShape(Circle())
+             .opacity(0.3)
     }
 
 }

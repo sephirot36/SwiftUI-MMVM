@@ -65,6 +65,7 @@
 		148721AF2BE39F6D00C6D29D /* CornerRadiusModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148721AD2BE39F6D00C6D29D /* CornerRadiusModifier.swift */; };
 		148721B02BE39F6D00C6D29D /* ElevationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148721AE2BE39F6D00C6D29D /* ElevationModifier.swift */; };
 		148721B32BE3A0A800C6D29D /* DevicesPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148721B22BE3A0A800C6D29D /* DevicesPreview.swift */; };
+		148721B62BE3C58B00C6D29D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148721B52BE3C58B00C6D29D /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +146,7 @@
 		148721AD2BE39F6D00C6D29D /* CornerRadiusModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerRadiusModifier.swift; sourceTree = "<group>"; };
 		148721AE2BE39F6D00C6D29D /* ElevationModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElevationModifier.swift; sourceTree = "<group>"; };
 		148721B22BE3A0A800C6D29D /* DevicesPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesPreview.swift; sourceTree = "<group>"; };
+		148721B52BE3C58B00C6D29D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,7 +345,6 @@
 				140B7F442BE2A81F00B61F63 /* UI */,
 				140B7F3D2BE25FB500B61F63 /* CharacterList */,
 				148721882BE35D7B00C6D29D /* CharacterDetail */,
-				140B7EDE2BE2342700B61F63 /* Assets.xcassets */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -403,6 +404,7 @@
 		140B7F4B2BE2AC4400B61F63 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				148721B42BE3C58100C6D29D /* Common */,
 				148721A32BE3955500C6D29D /* List */,
 				148721A42BE3956400C6D29D /* Detail */,
 			);
@@ -469,6 +471,7 @@
 		1487219D2BE392FF00C6D29D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				140B7EDE2BE2342700B61F63 /* Assets.xcassets */,
 				1487219E2BE3930700C6D29D /* Theme */,
 			);
 			path = Resources;
@@ -525,6 +528,14 @@
 				148721B22BE3A0A800C6D29D /* DevicesPreview.swift */,
 			);
 			path = Previews;
+			sourceTree = "<group>";
+		};
+		148721B42BE3C58100C6D29D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				148721B52BE3C58B00C6D29D /* LoadingView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -678,6 +689,7 @@
 				140B7F582BE2B52B00B61F63 /* MainConfigurator.swift in Sources */,
 				140B7F112BE23B0700B61F63 /* RickAndMortyDataSource.swift in Sources */,
 				140B7F432BE2A7AA00B61F63 /* CharacterListRouter.swift in Sources */,
+				148721B62BE3C58B00C6D29D /* LoadingView.swift in Sources */,
 				140B7F412BE2A67800B61F63 /* CharacterListConfigurator.swift in Sources */,
 				1487218C2BE35E5000C6D29D /* CharacterDetailView.swift in Sources */,
 				140B7F0D2BE2357E00B61F63 /* BaseEntity.swift in Sources */,

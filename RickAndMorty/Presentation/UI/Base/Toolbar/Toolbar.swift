@@ -68,7 +68,7 @@ enum ToolbarItemsBuilder {
     ) -> some View {
         logo
             .resizable()
-            .aspectRatio(contentMode: .fit)
+            .aspectRatio(contentMode: .fill)
             .frame(height: Theme.Toolbar.logoHeigh)
     }
 }

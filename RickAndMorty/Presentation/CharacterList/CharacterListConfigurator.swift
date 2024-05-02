@@ -26,7 +26,7 @@ struct CharacterListConfigurator {
         // Interactor
         let getCharactersListInteractor = GetCharacterListInteractorDefault(repository: repository)
         
-        // viewModel
+        // ViewModel
         let viewModel = CharacterListViewModelDefault(
             getCharactersInteractor: getCharactersListInteractor,
             router: router
