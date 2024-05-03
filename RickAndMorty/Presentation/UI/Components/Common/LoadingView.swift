@@ -36,3 +36,13 @@ struct LoadingView: View {
                     .edgesIgnoringSafeArea(.all)
     }
 }
+
+struct LoadingView_Previews: PreviewProvider {
+    static var previews: some View {
+        DevicesPreview {
+            ZStack {
+                LoadingView()
+            }
+        }
+    }
+}

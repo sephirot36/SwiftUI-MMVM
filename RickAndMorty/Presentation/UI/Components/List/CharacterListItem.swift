@@ -8,16 +8,12 @@
 import SwiftUI
 
 struct CharacterListItem: View {
-    
+
     private let avatarSize: CGFloat = 90
     private let rowSizeHeight: CGFloat = 90
-    private let specieSize: CGFloat = 40
-    
-    let space_16: CGFloat = 16
     
     let viewModel: CharacterListItemViewModel
     let onTap: () -> Void
-    @State private var showDetails = false
     
     var body: some View {
         ZStack {
@@ -70,4 +66,17 @@ struct CharacterListItem: View {
              .opacity(0.3)
     }
 
+}
+
+struct CharacterListItem_Previews: PreviewProvider {
+    static var previews: some View {
+        DevicesPreview {
+            ZStack {
+                CharacterListItem(
+                    viewModel: CharacterListItemViewModel.mock(),
+                    onTap: {}
+                )
+            }
+        }
+    }
 }

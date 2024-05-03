@@ -79,10 +79,8 @@ struct Elevation_Previews: PreviewProvider {
     }
 
     static var previews: some View {
-       /* DevicesPreview {
+        DevicesPreview {
             Elevation()
         }
-        */
-        EmptyView()
     }
 }

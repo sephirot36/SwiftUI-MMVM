@@ -17,7 +17,7 @@ struct CharacterDetailView<ViewModel: CharacterDetailViewModel>: View {
             Color("R&M-Orange").ignoresSafeArea()
             switch viewModel.screenState {
             case .loading:
-                loading
+                LoadingView()
             case .error:
                 emptyList
             case .empty:
@@ -54,10 +54,3 @@ struct CharacterDetailView<ViewModel: CharacterDetailViewModel>: View {
     }
 
 }
-
-#Preview {
-    ZStack{
-        
-    }
-}
-

@@ -19,13 +19,13 @@ final class HostingController<ContentView: View>: UIHostingController<AnyView> {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // iOS 15: Needed to hide an ugly effect hiding the back button when navigating
+    // iOS 15: Needed
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.setHidesBackButton(true, animated: false)
     }
     
-    // iOS 15-16: Needed to enable the Toolbar user interaction
+    // iOS 15-16: Needed
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)

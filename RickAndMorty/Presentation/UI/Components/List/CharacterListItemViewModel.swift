@@ -18,3 +18,31 @@ struct CharacterListItemViewModel {
     let url: String
 }
 
+extension CharacterListItemViewModel {
+    
+    static func empty() -> Self {
+        .init(
+            id: 0,
+            name: "",
+            status: .unknown,
+            species: .unknown,
+            gender: .unknown,
+            image: "",
+            url: ""
+        )
+    }
+    
+    static func mock() -> Self {
+        .init(
+            id: 1,
+            name: "Rick Sanchez",
+            status: .Dead,
+            species: .Alien,
+            gender: .Female,
+            image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+            url: "https://rickandmortyapi.com/api/character/1"
+        )
+    }
+}
+
+
