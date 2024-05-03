@@ -7,7 +7,6 @@
 
 import Combine
 
-// sourcery: AutoMockable
 protocol GetCharacterListInteractor {
     func execute(page: Int) -> AnyPublisher<[CharacterModel], CharacterError>
 }
