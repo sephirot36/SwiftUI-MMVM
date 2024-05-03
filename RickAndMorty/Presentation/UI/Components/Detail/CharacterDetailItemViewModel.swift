@@ -38,7 +38,7 @@ extension CharacterDetailItemViewModel {
             name: "Rick Sanchez",
             status: .Dead,
             species: .Alien,
-            gender: .Female,
+            gender: .Genderless,
             image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
             url: "https://rickandmortyapi.com/api/character/1"
         )
