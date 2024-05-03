@@ -32,7 +32,7 @@ struct CharacterListView<ViewModel: CharacterListViewModel>: View {
     
     var emptyList: some View {
         VStack {
-            Text("There are not Pokemons on the list")
+            Text("There are not Characters on the list")
                 .font(.system(size: 15, weight: .bold))
                 .foregroundColor(.black)
         }

@@ -31,4 +31,16 @@ extension CharacterDetailItemViewModel {
             url: ""
         )
     }
+    
+    static func mock() -> Self {
+        .init(
+            id: 1,
+            name: "Rick Sanchez",
+            status: .Dead,
+            species: .Alien,
+            gender: .Female,
+            image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+            url: "https://rickandmortyapi.com/api/character/1"
+        )
+    }
 }

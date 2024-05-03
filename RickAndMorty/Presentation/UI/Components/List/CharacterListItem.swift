@@ -17,7 +17,7 @@ struct CharacterListItem: View {
     
     let viewModel: CharacterListItemViewModel
     let onTap: () -> Void
-    let onDelete: () -> Void
+    @State private var showDetails = false
     
     var body: some View {
         ZStack {
@@ -27,9 +27,6 @@ struct CharacterListItem: View {
         .frame(maxWidth: .infinity)
         .onTapGesture {
             onTap()
-        }
-        .onLongPressGesture {
-            onDelete()
         }
     }
     
@@ -52,7 +49,7 @@ struct CharacterListItem: View {
     
     var name: some View {
         Text(viewModel.name)
-            .font(Theme.Font.bold15)
+            .font(Theme.Font.bold15monospaced)
             .foregroundColor(Color("R&M-Brown"))
     }
     

@@ -14,11 +14,12 @@ struct CharacterDetailView<ViewModel: CharacterDetailViewModel>: View {
     
     var body: some View {
         ZStack {
+            Color("R&M-Orange").ignoresSafeArea()
             switch viewModel.screenState {
             case .loading:
                 loading
             case .error:
-                emptyList // PokemonListErrorView<Presenter>()
+                emptyList
             case .empty:
                 emptyList
             case .content:
@@ -46,7 +47,7 @@ struct CharacterDetailView<ViewModel: CharacterDetailViewModel>: View {
     
     var emptyList: some View {
         VStack {
-            Text("There are not Pokemons on the list")
+            Text("There are not Character info")
                 .font(.system(size: 15, weight: .bold))
                 .foregroundColor(.black)
         }

@@ -19,7 +19,7 @@ struct CharacterListContentView<ViewModel: CharacterListViewModel>: View {
                         viewModel: chacractersListItemViewModel,
                         onTap: {
                             viewModel.loadCharacterDetail(id: "\(chacractersListItemViewModel.id)")
-                        }, onDelete: {}
+                        }
                     )
                 }
             }

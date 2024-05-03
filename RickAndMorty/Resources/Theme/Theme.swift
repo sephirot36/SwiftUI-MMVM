@@ -18,6 +18,9 @@ enum Theme {
         static var bold25: SwiftUI.Font = .system(size: 25, weight: .bold)
         static var bold35: SwiftUI.Font = .system(size: 35, weight: .bold)
         static var bold85: SwiftUI.Font = .system(size: 85, weight: .bold)
+        static var bold15monospaced: SwiftUI.Font = .system(size: 15, weight: .bold, design: .monospaced)
+        static var bold30monospaced: SwiftUI.Font = .system(size: 30, weight: .bold, design: .monospaced)
+        static var bold25monospaced: SwiftUI.Font = .system(size: 25, weight: .bold, design: .monospaced)
         
         
     }
