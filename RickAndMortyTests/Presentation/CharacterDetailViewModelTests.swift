@@ -26,7 +26,7 @@ final class CharacterDetailViewModelTests: XCTestCase {
     }
     
     func testLoadPokemons() {
-        // When create sut
+        // When viewModel Init
         // Then
         XCTAssertEqual(sut.characterDetail.character.id, 1)
         XCTAssertEqual(sut.characterDetail.character.name, "Rick")
